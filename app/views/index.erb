@@ -1,24 +1,22 @@
 <div class='sidebar'>
 <table>
 <tr><th>Tag</th><th>Count</th></tr>
+<% @tags.each do |tag| %>
 <tr>
-  <td>tag.name</td><td>count</td>
+  <td><a href="<%=  %>"<%= "#{tag.name}" %></td><td><%= "#{tag.complaints.count}" %></td>
 </tr>
-<tr>
-  <td>tag.name</td><td>count</td>
-</tr><tr>
-  <td>tag.name</td><td>count</td>
-</tr>
+<% end %>
 </table>
 </div>
 
 
 <h1 class='header center'>Warrnt</h1>
-<p class='center'>This will be text about the purpose of the app</p>
+<p class='center'>Providing Community Access to Police Oversight (or something...)</p>
 <h3>What to know before filing a complaint</h3>
   <ul>
-    <li>Resources go here</li>
-    <li>Resources go here</li>
+    <% @resources.each do |resource| %>
+      <li><a href="<%= "#{resource.url}" %>">"<%= "#{resource.description}" %>"</a></li>
+    <% end %>
   </ul>
 
 <a href='/complaints/new'>File a complaint</a>
