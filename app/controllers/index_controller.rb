@@ -1,7 +1,6 @@
 get '/' do
-  @tags = Tag.all
-  @tag_resources =
-  @general_resources = Tag.find_by(name: "General").resources
+  @tags = Tag.all.sort_by { |tag| tag.name }
+  @resources = Tag.find_by(name: "General").resources.sort_by { |resource| resource.description }
   erb :index
 end
 
