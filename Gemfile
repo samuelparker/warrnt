@@ -13,6 +13,7 @@ gem 'activerecord', '~>4.2.0'
 gem 'rake'
 gem 'pry'
 gem 'faker'
+gem 'pony'
 
 gem 'shotgun', '~>0.9.1'
 

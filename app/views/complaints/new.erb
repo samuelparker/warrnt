@@ -1,58 +1,79 @@
-<p id='pd'>test</p>
+<h1 id='pd'>test</h1>
 
-<form>
-  <input id='drinking' type='checkbox'>Drinking<br>
-  <input id='rudeness' type='checkbox'>Rudeness<br>
-  <input id='force' type='checkbox'>Excessive force<br>
+<% if @sent %>
+    <h2>Message Sent!</h2>
+<% else %>
+  <!--   <form>
+      <input id='drinking' type='checkbox'>Drinking<br>
+      <input id='rudeness' type='checkbox'>Rudeness<br>
+      <input id='force' type='checkbox'>Excessive force<br>
+    </form>
+
+    <div class='hiddendiv' id='drinkingdiv'>
+    <h2>Drinking</h2>
+    <ul>
+    <li><a href='http://www.google.com'>Link1</a></li>
+    <li><a href='http://www.google.com'>Link2</a></li>
+    <li><a href='http://www.google.com'>Link2</a></li>
+    </ul>
+    </div>
+
+    <div class='hiddendiv' id='rudenessdiv'>
+    <h2>Rudeness</h2>
+    <ul>
+    <li><a href='http://www.google.com'>Link1</a></li>
+    <li><a href='http://www.google.com'>Link2</a></li>
+    <li><a href='http://www.google.com'>Link2</a></li>
+    </ul>
+    </div>
+
+    <div class='hiddendiv' id='forcediv'>
+    <h2>Force</h2>
+    <ul>
+    <li><a href='http://www.google.com'>Link1</a></li>
+    <li><a href='http://www.google.com'>Link2</a></li>
+    <li><a href='http://www.google.com'>Link2</a></li>
+    </ul>
+    </div>
+    <br><br><br> -->
+
+    <form>
+
+<% Tag.all.sort_by(&:name).each do |tag| %>
+
+<input id='<%= tag.name.split(' ')[0] %>' type='checkbox'><%= tag.name %><br>
+
+<% end %>
+
 </form>
 
-<div class='hiddendiv' id='drinkingdiv'>
-<h2>Drinking</h2>
-<ul>
-<li><a href='http://www.google.com'>Link1</a></li>
-<li><a href='http://www.google.com'>Link2</a></li>
-<li><a href='http://www.google.com'>Link2</a></li>
-</ul>
-</div>
+<% Tag.all.sort_by(&:name).each do |tag| %>
+<div class='hiddendiv' id='<%= tag.name.split(' ')[0] %>div'>
+<p><%= tag.name %></p>
+  <ul class='resources'>
+  <% tag.resources.each do |resource| %>
 
-<div class='hiddendiv' id='rudenessdiv'>
-<h2>Rudeness</h2>
-<ul>
-<li><a href='http://www.google.com'>Link1</a></li>
-<li><a href='http://www.google.com'>Link2</a></li>
-<li><a href='http://www.google.com'>Link2</a></li>
-</ul>
-</div>
+  <li><a href='<%= resource.url %>'><%= resource.description %></a></li>
 
-<div class='hiddendiv' id='forcediv'>
-<h2>Force</h2>
-<ul>
-<li><a href='http://www.google.com'>Link1</a></li>
-<li><a href='http://www.google.com'>Link2</a></li>
-<li><a href='http://www.google.com'>Link2</a></li>
-</ul>
-</div>
+    <% end %>
+  </ul>
+  </div>
+<% end %>
 
+<br>
+    <form action='/complaints' method='post'>
+    <label for='subject'>Subject</label>
+    <input type='text' name='subject' placeholder="subject"><br>
+    <label for='sendto'>Send to</label>
+    <input type='text' name='to' placeholder="to"><br>
+    <label for='youremail'>Your Email</label>
+    <input type='text' name='from' placeholder="from"><br>
+    <label for='message'>Message</label><br>
+    <textarea name='message' cols='50', rows='10'></textarea><br>
+    <input type='submit' value="Send">
+    </form>
 
-<div id="form-messages"></div>
+    </form>
+<% end %>
 
-<form id="ajax-contact" method="post" action="mailer.php">
-    <div class="field">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-    </div>
-
-    <div class="field">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-    </div>
-
-    <div class="field">
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-    </div>
-
-    <div class="field">
-        <button type="submit">Send</button>
-    </div>
-</form>
+<a href='/'>Home</a>

@@ -3,17 +3,52 @@ $(document).ready(function() {
   // This guarantees that any elements we bind to will exist on the page
   // when we try to bind to them
 
-  $('#drinking').click(function(){
-    $('#drinkingdiv').toggle();
+  $('#General').click(function(){
+    $('#Generaldiv').toggle();
   });
 
-   $('#rudeness').click(function(){
-    $('#rudenessdiv').toggle();
+    $('#Excessive').click(function(){
+    $('#Excessivediv').toggle();
   });
 
-    $('#force').click(function(){
-    $('#forcediv').toggle();
+  $('#Soliciting').click(function(){
+    $('#Solicitingdiv').toggle();
   });
+  $('#Drinking').click(function(){
+    $('#Drinkingdiv').toggle();
+  });
+  $('#Harassment').click(function(){
+    $('#Harassmentdiv').toggle();
+  });
+  $('#Making').click(function(){
+    $('#Makingdiv').toggle();
+  });
+  $('#Use').click(function(){
+    $('#Usediv').toggle();
+  });
+  $('#Discrimination').click(function(){
+    $('#Discriminationdiv').toggle();
+  });
+  $('#Altering').click(function(){
+    $('#Alteringdiv').toggle();
+  });
+  $('#Careless').click(function(){
+    $('#Carelessdiv').toggle();
+  });
+  $('#Racial').click(function(){
+    $('#Racialdiv').toggle();
+  });
+  $('#Malicious').click(function(){
+    $('#Maliciousdiv').toggle();
+  });
+  $('#Sexual').click(function(){
+    $('#Sexualdiv').toggle();
+  });
+  $('#Commendations').click(function(){
+    $('#Commendationsdiv').toggle();
+  });
+
+
 
 
 
