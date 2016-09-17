@@ -1,48 +1,51 @@
-<p id='pd'>test</p>
+<h1 id='pd'>test</h1>
 
-<form>
-  <input id='drinking' type='checkbox'>Drinking<br>
-  <input id='rudeness' type='checkbox'>Rudeness<br>
-  <input id='force' type='checkbox'>Excessive force<br>
-</form>
+<% if @sent %>
+    <h2>Message Sent!</h2>
+<% else %>
+    <form>
+      <input id='drinking' type='checkbox'>Drinking<br>
+      <input id='rudeness' type='checkbox'>Rudeness<br>
+      <input id='force' type='checkbox'>Excessive force<br>
+    </form>
 
-<div class='hiddendiv' id='drinkingdiv'>
-<h2>Drinking</h2>
-<ul>
-<li><a href='http://www.google.com'>Link1</a></li>
-<li><a href='http://www.google.com'>Link2</a></li>
-<li><a href='http://www.google.com'>Link2</a></li>
-</ul>
-</div>
+    <div class='hiddendiv' id='drinkingdiv'>
+    <h2>Drinking</h2>
+    <ul>
+    <li><a href='http://www.google.com'>Link1</a></li>
+    <li><a href='http://www.google.com'>Link2</a></li>
+    <li><a href='http://www.google.com'>Link2</a></li>
+    </ul>
+    </div>
 
-<div class='hiddendiv' id='rudenessdiv'>
-<h2>Rudeness</h2>
-<ul>
-<li><a href='http://www.google.com'>Link1</a></li>
-<li><a href='http://www.google.com'>Link2</a></li>
-<li><a href='http://www.google.com'>Link2</a></li>
-</ul>
-</div>
+    <div class='hiddendiv' id='rudenessdiv'>
+    <h2>Rudeness</h2>
+    <ul>
+    <li><a href='http://www.google.com'>Link1</a></li>
+    <li><a href='http://www.google.com'>Link2</a></li>
+    <li><a href='http://www.google.com'>Link2</a></li>
+    </ul>
+    </div>
 
-<div class='hiddendiv' id='forcediv'>
-<h2>Force</h2>
-<ul>
-<li><a href='http://www.google.com'>Link1</a></li>
-<li><a href='http://www.google.com'>Link2</a></li>
-<li><a href='http://www.google.com'>Link2</a></li>
-</ul>
-</div>
-<br><br><br>
+    <div class='hiddendiv' id='forcediv'>
+    <h2>Force</h2>
+    <ul>
+    <li><a href='http://www.google.com'>Link1</a></li>
+    <li><a href='http://www.google.com'>Link2</a></li>
+    <li><a href='http://www.google.com'>Link2</a></li>
+    </ul>
+    </div>
+    <br><br><br>
 
-<form action='/complaints' method='post'>
-<input type='text' name='subject' placeholder="subject">
-<input type='text' name='to' placeholder="to">
-<input type='text' name='from' placeholder="from">
-<textarea name='message' cols='50', rows='10'></textarea>
-<input type='submit' value="Send">
-</form>
+    <form action='/complaints' method='post'>
+    <input type='text' name='subject' placeholder="subject">
+    <input type='text' name='to' placeholder="to">
+    <input type='text' name='from' placeholder="from">
+    <textarea name='message' cols='50', rows='10'></textarea>
+    <input type='submit' value="Send">
+    </form>
 
-</form>
+    </form>
+<% end %>
 
-
-
+<a href='/'>Home</a>
