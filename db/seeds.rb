@@ -78,35 +78,38 @@ Resource.create(description: "Reporting Police Harassment",
                 ).tags << Tag.find_by(name: "Harassment")
 
 # False Report
-Resource.create(description: "",
-                        url: ""
+Resource.create(description: "Penal Code 118.1: Police Officer(s) Files False Reports",
+                        url: "http://www.leginfo.ca.gov/cgi-bin/displaycode?section=pen&group=00001-01000&file=118-131"
                 ).tags << Tag.find_by(name: "Making a False Report")
-Resource.create(description: "",
-                        url: ""
+Resource.create(description: "Examples and Related Offenses to Police Filing False Reports",
+                        url: "http://www.losangelescriminallawyer.pro/california-penal-code-section-118-1-pc-police-officers-filing-fa.html"
+                ).tags << Tag.find_by(name: "Making a False Report")
+Resource.create(description: "Identifying the False Report and What To Do About It",
+                        url: "http://www.shouselaw.com/police-officers-filing-false-reports.html"
                 ).tags << Tag.find_by(name: "Making a False Report")
 
 # Narcotic Use
-Resource.create(description: "",
-                        url: ""
+Resource.create(description: "Report on Police Officer Using and Selling Narcotics",
+                        url: "https://www.justice.gov/opa/pr/bakersfield-california-police-narcotics-detective-charged-bribery-drug-trafficking"
                 ).tags << Tag.find_by(name: "Use of Narcotics (On or Off Duty)")
-Resource.create(description: "",
-                        url: ""
+Resource.create(description: "Drug Policy Alliance Report: Police, Drugs, and Corruption",
+                        url: "https://www.drugpolicy.org/docUploads/police_corruption_report.pdf"
                 ).tags << Tag.find_by(name: "Use of Narcotics (On or Off Duty)")
 
 # Discrimination
-Resource.create(description: "",
-                        url: ""
+Resource.create(description: "California Law: AB-953 Racial Profiling",
+                        url: "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201520160AB953"
                 ).tags << Tag.find_by(name: "Discrimination")
-Resource.create(description: "",
-                        url: ""
+Resource.create(description: "What to Do When You are a Victim of Discrimination",
+                        url: "http://www.shouselaw.com/racial-profiling.html"
                 ).tags << Tag.find_by(name: "Discrimination")
 
 # Alter Official Docs
-Resource.create(description: "",
-                        url: ""
+Resource.create(description: "Penal Code 132-141: Forgery, Altering, and Fabrication of Evidence",
+                        url: "http://www.leginfo.ca.gov/cgi-bin/displaycode?section=pen&group=00001-01000&file=132-141"
                 ).tags << Tag.find_by(name: "Altering Information on an Official Document")
-Resource.create(description: "",
-                        url: ""
+Resource.create(description: "Planting or Tampering Evidence",
+                        url: "http://www.shouselaw.com/planting-tampering-evidence.html"
                 ).tags << Tag.find_by(name: "Altering Information on an Official Document")
 
 # Careless Driving
@@ -118,27 +121,27 @@ Resource.create(description: "OCC Recommendations for Use of Police Vehicles",
                 ).tags << Tag.find_by(name: "Careless Driving")
 
 # Racial Intimidation
-Resource.create(description: "",
-                        url: ""
+Resource.create(description: "Examples of Racial Intimidation and Legal Defenses",
+                        url: "http://www.shouselaw.com/hate-crime.html"
                 ).tags << Tag.find_by(name: "Racial or Ethnic Intimidation")
-Resource.create(description: "",
-                        url: ""
+Resource.create(description: "Laws Pertaining to Racial Intimidation and Hate Crimes",
+                        url: "http://ag.ca.gov/civilrights/pdf/laws.pdf"
                 ).tags << Tag.find_by(name: "Racial or Ethnic Intimidation")
 
 # Threats or Assault
-Resource.create(description: "",
-                        url: ""
+Resource.create(description: "How to Report Threats",
+                        url: "http://www.shouselaw.com/criminal_threats.html"
                 ).tags << Tag.find_by(name: "Malicious Threats or Assault")
-Resource.create(description: "",
-                        url: ""
+Resource.create(description: "Penal Code 142-181: Threats and Assaults",
+                        url: "http://www.leginfo.ca.gov/cgi-bin/displaycode?section=pen&group=00001-01000&file=142-181"
                 ).tags << Tag.find_by(name: "Malicious Threats or Assault")
 
 # Sexual Harassment
-Resource.create(description: "",
-                        url: ""
+Resource.create(description: "Filing a Sexual Harassment Complaint",
+                        url: "http://www.dfeh.ca.gov/res/docs/publications/DFEH-185.pdf"
                 ).tags << Tag.find_by(name: "Sexual Harassment")
-Resource.create(description: "",
-                        url: ""
+Resource.create(description: "California Sexual Harassment Report",
+                        url: "http://scholarworks.bgsu.edu/cgi/viewcontent.cgi?article=1058&context=crim_just_pub"
                 ).tags << Tag.find_by(name: "Sexual Harassment")
 
 # Commendations
