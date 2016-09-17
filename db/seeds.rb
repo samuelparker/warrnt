@@ -110,11 +110,11 @@ Resource.create(description: "",
                 ).tags << Tag.find_by(name: "Altering Information on an Official Document")
 
 # Careless Driving
-Resource.create(description: "",
-                        url: ""
+Resource.create(description: "SFPD Policy on Vehicle Collision Involving Officers",
+                        url: "http://sanfranciscopolice.org/sites/default/files/FileCenter/Documents/14814-DGO2.06.pdf"
                 ).tags << Tag.find_by(name: "Careless Driving")
-Resource.create(description: "",
-                        url: ""
+Resource.create(description: "OCC Recommendations for Use of Police Vehicles",
+                        url: "http://sfgov.org/occ/ftp/uploadedfiles/occ/reports/1998/rec0398.htm"
                 ).tags << Tag.find_by(name: "Careless Driving")
 
 # Racial Intimidation
