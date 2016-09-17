@@ -26,6 +26,7 @@ Tag.create(name: "Careless Driving")
 Tag.create(name: "Racial or Ethnic Intimidation")
 Tag.create(name: "Malicious Threats or Assault")
 Tag.create(name: "Sexual Harassment")
+Tag.create(name: "Commendations")
 
 # General Resources
 Resource.create(description: "City of San Francisco Office of Citizen Complaints",
@@ -48,32 +49,32 @@ Resource.create(description: "How to File a Complaint with The US DOJ",
 Resource.create(description: "SFPD Use of Force Policy",
                         url: "http://sanfranciscopolice.org/sites/default/files/Documents/PoliceCommission/PoliceCommission040616-040616stakeholdersletters.pdf"
                         ).tags << Tag.find_by(name: "Excessive Force")
-Resource.create(description: "",
+Resource.create(description: "Open Justice - Statistics on Deaths in Policy Custody",
                         url: ""
                         ).tags << Tag.find_by(name: "Excessive Force")
 
 # Bribes
-Resource.create(description: "",
-                        url: ""
+Resource.create(description: "Open Justice - Statistics on Police Bribe Soliciting",
+                        url: "http://openjustice.doj.ca.gov/agencies/overview"
                 ).tags << Tag.find_by(name: "Soliciting or Accepting Bribes")
-Resource.create(description: "",
-                        url: ""
+Resource.create(description: "ACLU - Police Corruption",
+                        url: "https://www.aclu.org/issues/criminal-law-reform/reforming-police-practices/police-corruption"
                 ).tags << Tag.find_by(name: "Soliciting or Accepting Bribes")
 
 # Drinking
-Resource.create(description: "",
-                        url: ""
+Resource.create(description: "SFPD Policy on Alcohol Consumption",
+                        url: "http://sanfranciscopolice.org/sites/default/files/FileCenter/Documents/24732-DGO%202.02%20as%20of%2012-03-2008.pdf"
                 ).tags << Tag.find_by(name: "Drinking on Duty")
-Resource.create(description: "",
-                        url: ""
+Resource.create(description: "Off Duty Drinking",
+                        url: "http://abc7news.com/news/photo-of-drunk-on-duty-park-ranger-raises-questions-about-special-treament/374154/"
                 ).tags << Tag.find_by(name: "Drinking on Duty")
 
 # Harassment
-Resource.create(description: "",
-                        url: ""
+Resource.create(description: "SFPD Discipline Process",
+                        url: "http://sanfranciscopolice.org/sites/default/files/FileCenter/Documents/14813-DGO2.07.pdf"
                 ).tags << Tag.find_by(name: "Harassment")
-Resource.create(description: "",
-                        url: ""
+Resource.create(description: "Reporting Police Harassment",
+                        url: "http://i0.wp.com/theverybesttop10.com/wp-content/uploads/2015/10/Top-10-Crime-Fighting-Police-Cats-2.jpg?resize=510%2C363"
                 ).tags << Tag.find_by(name: "Harassment")
 
 # False Report
@@ -139,3 +140,14 @@ Resource.create(description: "",
 Resource.create(description: "",
                         url: ""
                 ).tags << Tag.find_by(name: "Sexual Harassment")
+
+# Commendations
+Resource.create(description: "SFPD File a Public Commendation",
+                        url: "http://sanfranciscopolice.org/public-commendation-complaint"
+                ).tags << Tag.find_by(name: "Commendations")
+Resource.create(description: "SFPD Operation Outreach",
+                        url: "http://sanfranciscopolice.org/sfpd-operation-outreach-resources"
+                ).tags << Tag.find_by(name: "Commendations")
+Resource.create(description: "Police Kitty Directs Traffic",
+                        url: "https://ae01.alicdn.com/kf/HTB13KRNMFXXXXalXXXXq6xXFXXXc/New-Products-For-Pet-Police-Suit-Coat-And-Hat-Dog-font-b-Costume-b-font-Clothes.jpg"
+                ).tags << Tag.find_by(name: "Commendations")
