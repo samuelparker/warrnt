@@ -1,0 +1,58 @@
+<p id='pd'>test</p>
+
+<form>
+  <input id='drinking' type='checkbox'>Drinking<br>
+  <input id='rudeness' type='checkbox'>Rudeness<br>
+  <input id='force' type='checkbox'>Excessive force<br>
+</form>
+
+<div class='hiddendiv' id='drinkingdiv'>
+<h2>Drinking</h2>
+<ul>
+<li><a href='http://www.google.com'>Link1</a></li>
+<li><a href='http://www.google.com'>Link2</a></li>
+<li><a href='http://www.google.com'>Link2</a></li>
+</ul>
+</div>
+
+<div class='hiddendiv' id='rudenessdiv'>
+<h2>Rudeness</h2>
+<ul>
+<li><a href='http://www.google.com'>Link1</a></li>
+<li><a href='http://www.google.com'>Link2</a></li>
+<li><a href='http://www.google.com'>Link2</a></li>
+</ul>
+</div>
+
+<div class='hiddendiv' id='forcediv'>
+<h2>Force</h2>
+<ul>
+<li><a href='http://www.google.com'>Link1</a></li>
+<li><a href='http://www.google.com'>Link2</a></li>
+<li><a href='http://www.google.com'>Link2</a></li>
+</ul>
+</div>
+
+
+<div id="form-messages"></div>
+
+<form id="ajax-contact" method="post" action="mailer.php">
+    <div class="field">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="field">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="field">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+    </div>
+
+    <div class="field">
+        <button type="submit">Send</button>
+    </div>
+</form>
