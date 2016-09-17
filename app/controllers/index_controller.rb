@@ -6,6 +6,7 @@ get '/complaints/new' do
   erb :'complaints/new'
 end
 
-get '/files' do
-  redirect '/test'
+post '/complaints' do
+  Pony.mail(:to => params[:to], :from => params[:from], :subject => params[:subject], :body => params[:message])
+  redirect '/'
 end

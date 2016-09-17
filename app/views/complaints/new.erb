@@ -32,27 +32,17 @@
 <li><a href='http://www.google.com'>Link2</a></li>
 </ul>
 </div>
+<br><br><br>
 
-
-<div id="form-messages"></div>
-
-<form id="ajax-contact" method="post" action="/complaints/mailer.php">
-    <div class="field">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-    </div>
-
-    <div class="field">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-    </div>
-
-    <div class="field">
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-    </div>
-
-    <div class="field">
-        <button type="submit">Send</button>
-    </div>
+<form action='/complaints' method='post'>
+<input type='text' name='subject' placeholder="subject">
+<input type='text' name='to' placeholder="to">
+<input type='text' name='from' placeholder="from">
+<textarea name='message' cols='50', rows='10'></textarea>
+<input type='submit' value="Send">
 </form>
+
+</form>
+
+
+
