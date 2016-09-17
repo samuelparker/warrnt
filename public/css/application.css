@@ -1,0 +1,41 @@
+.container {
+  width: 800px;
+  margin: 5px auto;
+  border: 1px solid black;
+  height: 300px;
+}
+
+.header {
+  /*text-align: center;*/
+}
+
+.center {
+  text-align: center;
+}
+
+
+.sidebar {
+  width: 200px;
+  float: right;
+  background-color: lightblue;
+  clear: both;
+  min-height: 300px;
+}
+
+table {
+  margin: 15px;
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+tr {
+  margin: 15px;
+}
+
+tr:hover {
+  background-color: white;
+}
+
+td {
+  padding: 3px;
+}
