@@ -43,3 +43,14 @@ td {
   display: none;
 }
 
+.resources {
+  list-style-type: none;
+}
+
+.resources li a {
+  text-decoration: none;
+}
+
+.resources li a:hover {
+  color: red;
+}

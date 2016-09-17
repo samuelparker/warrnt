@@ -1,6 +1,6 @@
 <form>
 
-<% Tag.all.each do |tag| %>
+<% Tag.all.sort_by(&:name).each do |tag| %>
 
 <input id='<%= tag.name.split(' ')[0] %>' type='checkbox'><%= tag.name %><br>
 
@@ -8,10 +8,10 @@
 
 </form>
 
-<% Tag.all.each do |tag| %>
+<% Tag.all.sort_by(&:name).each do |tag| %>
 <div class='hiddendiv' id='<%= tag.name.split(' ')[0] %>div'>
 <p><%= tag.name %></p>
-  <ul>
+  <ul class='resources'>
   <% tag.resources.each do |resource| %>
 
   <li><a href='<%= resource.url %>'><%= resource.description %></a></li>

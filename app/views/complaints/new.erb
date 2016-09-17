@@ -3,7 +3,7 @@
 <% if @sent %>
     <h2>Message Sent!</h2>
 <% else %>
-    <form>
+  <!--   <form>
       <input id='drinking' type='checkbox'>Drinking<br>
       <input id='rudeness' type='checkbox'>Rudeness<br>
       <input id='force' type='checkbox'>Excessive force<br>
@@ -35,13 +35,41 @@
     <li><a href='http://www.google.com'>Link2</a></li>
     </ul>
     </div>
-    <br><br><br>
+    <br><br><br> -->
 
+    <form>
+
+<% Tag.all.sort_by(&:name).each do |tag| %>
+
+<input id='<%= tag.name.split(' ')[0] %>' type='checkbox'><%= tag.name %><br>
+
+<% end %>
+
+</form>
+
+<% Tag.all.sort_by(&:name).each do |tag| %>
+<div class='hiddendiv' id='<%= tag.name.split(' ')[0] %>div'>
+<p><%= tag.name %></p>
+  <ul class='resources'>
+  <% tag.resources.each do |resource| %>
+
+  <li><a href='<%= resource.url %>'><%= resource.description %></a></li>
+
+    <% end %>
+  </ul>
+  </div>
+<% end %>
+
+<br>
     <form action='/complaints' method='post'>
-    <input type='text' name='subject' placeholder="subject">
-    <input type='text' name='to' placeholder="to">
-    <input type='text' name='from' placeholder="from">
-    <textarea name='message' cols='50', rows='10'></textarea>
+    <label for='subject'>Subject</label>
+    <input type='text' name='subject' placeholder="subject"><br>
+    <label for='sendto'>Send to</label>
+    <input type='text' name='to' placeholder="to"><br>
+    <label for='youremail'>Your Email</label>
+    <input type='text' name='from' placeholder="from"><br>
+    <label for='message'>Message</label><br>
+    <textarea name='message' cols='50', rows='10'></textarea><br>
     <input type='submit' value="Send">
     </form>
 
