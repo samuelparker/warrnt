@@ -1,0 +1,29 @@
+<div class='sidebar'>
+<table>
+<tr><th>Category</th><th>Count</th></tr>
+<% @tags.each do |tag| %>
+<tr>
+  <% if tag.name != "General" %>
+  <td><a href="/tags/<%="#{tag.id}"%>"><%= "#{tag.name}" %></a></td><td><%= "#{tag.complaints.count}" %></td>
+  <% end %>
+</tr>
+<% end %>
+</table>
+</div>
+
+<main>
+
+<h1 class='header center'>Warrnt</h1>
+<h2 class='center'><%= @tag.name %></h2>
+<h3>What to know before filing a complaint</h3>
+  <ul>
+    <% @resources.each do |resource| %>
+      <li><a href="<%= "#{resource.url}" %>"><%= "#{resource.description}" %></a></li>
+    <% end %>
+  </ul>
+
+<a href='/complaints/new'>File a complaint</a>
+
+</main>
+
+<p id='clear'></p>

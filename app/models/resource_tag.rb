@@ -1,0 +1,4 @@
+class ResourceTag < ActiveRecord::Base
+  belongs_to :tag
+  belongs_to :resource
+end

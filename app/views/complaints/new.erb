@@ -1,0 +1,97 @@
+<main>
+
+
+
+<% if @sent %>
+    <h2 id='sent'>Message Sent!</h2>
+<% else %>
+
+<h1 id='pd' class='center'>Submit Report</h1>
+
+<div id='list'>
+
+    <form class="form-fields" action='/complaints' method='post'>
+
+<% Tag.all.sort_by(&:name).each do |tag| %>
+
+<input id='<%= tag.name.split(' ')[0] %>' type='checkbox' name='checks[<%= tag.id %>]' value='<%= tag.id %>'> <%= tag.name %><br>
+
+<% end %>
+
+
+
+
+
+
+
+<% Tag.all.sort_by(&:name).each do |tag| %>
+<div class='hiddendiv' id='<%= tag.name.split(' ')[0] %>div'>
+<p class="hidden-title"><%= tag.name %></p>
+  <ul class='resources'>
+  <% tag.resources.each do |resource| %>
+
+  <li><a target="_blank" href='<%= resource.url %>'><%= resource.description %></a></li>
+
+    <% end %>
+  </ul>
+  </div>
+<% end %>
+
+</div>
+<div id='feedback'>
+    <label for='subject'>Subject</label><br>
+    <input type='text' name='subject' placeholder="subject" size='32'><br>
+
+
+
+    <label for='youremail'>Your Email</label><br>
+    <input type='text' name='from' placeholder="you@person.com" size='32'><br>
+
+    <label for='sendto'>Recipient(s):</label><br>
+
+
+    <input id='email1' class='hiddeninput' type='text' name='to[:email1]' value='sfpdreport@sfgov.com' size='32'>
+    <input id='email2' class='hiddeninput' type='text' name='to[:email2]' value="contact@aclusf.com" size='32'>
+    <input id='email3' class='hiddeninput' type='text' name='to[:email3]' value="sfocc@sfgov.com" size='32'>
+    <input id='email4' class='hiddeninput' type='text' name='to[:email4]' value='citycouncil@sfgov.com' size='32'>
+    <input id='email5' class='hiddeninput' type='text' name='to[:email5]' value="contact@naacp.com" size='32'>
+    <input id='email6' class='hiddeninput' type='text' name='to[:email6]' value="crisishotline@sfwar.com" size='32'>
+    <input id='email7' class='hiddeninput' type='text' name='to[:email5]' value="neighborhoodcrimewatch@sf.org" size='32'>
+    <input id='email8' class='hiddeninput' type='text' name='to[:email6]' value="sf.ia@sfpd.org" size='32'>
+
+    <!-- <input type='text' name='to' placeholder="john@person.com" size='32'>
+ -->
+
+
+    <br><label for='message'>Message</label><br>
+    <textarea id='textarea' name='message' cols='100', rows='20'><%=
+ <<-FORM
+#{Date.today.strftime('%d %b %Y')}
+
+To Whom it May Concern:
+
+I am writing to inform you about an interaction I had with {insert officer's name or badge #} of the San Francisco Police Department that occurred on {date of the interaction}.
+
+{Describe the interaction in detail, including the location, time, Only include facts that you're sure about. If you don't know the officer's badge # or name, include a physical description of him/her.}
+
+Sincerely,
+{Your Name}
+{Your Address}
+{Your Phone #}
+{Your Email}
+
+FORM
+
+    %></textarea><br>
+    <input id='submit' type='submit' value="Attach a File">
+    </form>
+    <input id='submit' type='submit' value="Submit Report">
+    </form>
+    </form>
+
+    </div>
+<% end %>
+
+<p id='clear'></p>
+
+</main>

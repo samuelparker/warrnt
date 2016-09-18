@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    normalize.css removes cross-browser differences in defaults, e.g.,
+    differences in how form elements appear between Firefox and IE
+    See: http://necolas.github.com/normalize.css/
+  -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <!--
+    application.css is where you put your styles
+  -->
+  <link rel="stylesheet" href="/css/application.css">
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Baloo+Bhaina|Crete+Round|Righteous|Russo+One|Shadows+Into+Light" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
+
+  <script src="/js/application.js"></script>
+
+  <title></title>
+</head>
+<body>
+<body class="home page page-id-10 page-template-default">
+<div id="navbar-bg" class="navbar" data-navbar-opacity="1">
+
+<img id = "logo-icon">
+
+</div><h1 id='wheader' class='center'><a href="/">WARRNT</a></h1>
+
+  <%= yield %>
+<!-- <iframe width='100%' height='520' frameborder='0' src='https://samswey.carto.com/viz/0d44bd96-31d3-11e5-8953-0e9d821ea90d/embed_map' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe> -->
+</body>
+</html>

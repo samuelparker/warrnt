@@ -1,0 +1,171 @@
+<div class='jumbotron' background-image = "image_assets/popo_pic.jpg">
+  <div class= "row">
+  <div class="col-xs-6 col-lg-4">
+              <h2 id='accounth2'>Warrnt Creates Accountability</h2>
+              <p id='account'>While authorities are essential, providing a system to prevent abuse of power is equally as vital. Warrnt bridges the gap between everyday people and their local representatives, creating a safer, more accountable police force.</p>
+            </div>
+  </div>
+</div>
+<div class='sidebar'>
+
+
+<ul>
+<li>Category</li>
+
+<!-- <th>Count</th> -->
+
+
+<% @tags.each do |tag| %>
+
+  <% if tag.name != "General" %>
+  <li><a href="/tags/<%="#{tag.id}"%>"><%= "#{tag.name}" %></a></li>
+
+  <!-- <td><%= "#{tag.complaints.count}" %></td> -->
+
+  <% end %>
+<% end %>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<main>
+
+
+
+<p class='center' id='community'>Providing Community Access to Police Oversight</p>
+
+<div class='center'>
+
+
+
+<div id ="frontpage_links">
+<h3 id='what2know'>What to know before filing a complaint:</h3>
+
+<style>
+  /* Style The Dropdown Button */
+  .dropbtn {
+    background-color: #8A0F3A;
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    min-width: 400px;
+  }
+
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: lightgrey;
+    min-width: 400px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+
+</style>
+<div>
+  <img class= "btn-img" src="../image_assets/Police_cap.png"/>
+  <img class= "btn-img" src="../image_assets/police-light.png"/>
+  <img class= "btn-img" src="../image_assets/report.png"/>
+</div>
+<div class="dropdown">
+
+  <button class="dropbtn">What to do if you're stopped by police</button>
+  <div class="dropdown-content">
+
+    <p>A police officer should never harass or bully you or make fun of a personal characteristic, like your race, ethnicity, or sexual orientation.  Also, police officers should also never use more force than is reasonable. Tasing, use of pepper spray, handcuffing, or causing an injury can all qualify as excessive use of force.</p>
+
+    <h3>If You Are Stopped Or Questioned By Police</h3>
+
+    <ul>
+      <li>Stay calm. Don't argue, resist, run away, or interfere with the officer (even if you think s/he is wrong). You can ask calmly if you're free to leave. If yes, calmly and silently walk away.</li>
+      <li>If a police officer tells you that you are not free to go, in some states, s/he may require you to identify yourself.</li>
+      <li>Know that you can assert your right to remain silent and can answer any question by saying "I want to remain silent." You also have the right not to write or sign a statement.  If you choose to speak or write about what happened, your words can be used against you.</li>
+      <li>If you think you want to make a statement, you can also ask to have a lawyer, a parent, or another adult present before you are questioned. If you talk, your words can still be used against you, but it's the best way to protect your rights.</li>
+      <li>Let an adult you trust know what happened. If you're hurt, see a doctor and take pictures of your injuries.</li>
+      <li>Afterwards, write down everything you remember (like the officer's badge number and name, who else was there, and what happened).</li>
+      If you think your rights have been violated in any way, call your local <a href="www.ACLU.org/affiliates">ACLU chapter</a>.
+    </ul>
+  </div>
+</div>
+
+<div class="dropdown">
+
+  <button class="dropbtn">Search and Warrants</button>
+  <div class="dropdown-content">
+
+
+    <p>Know Your Rights</p>
+    <ul>
+      <li>You have the right to remain silent. If you wish to exercise that right, say so out loud.</li>
+      <li>You have the right to refuse to consent to a search of yourself, your car or your home.</li>
+      <li>If you are not under arrest, you have the right to calmly leave.</li>
+      <li>You have the right to a lawyer if you are arrested. Ask for one immediately.</li>
+      <li>Regardless of your immigration or citizenship status, you have constitutional rights.</li>
+    </ul>
+    <p>Your Responsibilities</p>
+    <ul>
+      <li>Do stay calm and be polite.</li>
+      <li>Do not interfere with or obstruct the police.</li>
+      <li>Do not lie or give false documents.</li>
+      <li>Do prepare yourself and your family in case you are arrested.</li>
+      <li>Do remember the details of the encounter.</li>
+      <li>Do file a written complaint or call your local ACLU if you feel your rights have been violated.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">General Resources</button>
+  <div class="dropdown-content">
+
+    <ul>
+      <% @resources.each do |resource| %>
+        <li><a href="<%= "#{resource.url}" %>"><%= "#{resource.description}" %></a></li>
+      <% end %>
+    </ul>
+
+  </div>
+</div>
+<!-- <a class="twitter-timeline"
+  href="https://twitter.com/fabric">
+Tweets by @fabric
+</a>
+ -->  <ul>
+
+<br>
+    <a href='/complaints/new'><button id='complaint'>Submit a Report</button></a>
+  </ul>
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</main>
+
+<p id='clear'></p>

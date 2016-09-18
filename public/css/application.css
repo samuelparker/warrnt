@@ -1,0 +1,304 @@
+a {
+  color: blue;
+}
+
+body {
+  margin: 0px;
+  font-family: 'Baloo Bhaina', cursive;
+  background-color: #007D8C;
+}
+
+img#logo-icon {
+  content: url("../image_assets/landing-page-icons-04.png");
+  /*top: 5px;*/
+  left: 10px;
+  position: absolute;
+}
+
+#navbar-bg {
+  background-color: #007D8C;
+  /*height: 0px;*/
+}
+
+.jumbotron {
+  height: 680px;
+  /*position: absolute;*/
+  background: url('../image_assets/popo_cover.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.row {
+  /*margin-top: 3.5%;*/
+  height: 100%;
+  opacity: .9;
+
+  background-image:
+    linear-gradient(
+      #616f67, #000000
+    );
+}
+
+h2{
+  font-size: 2em;
+  color: #007D8C;
+}
+
+p{
+  color: gray;
+}
+
+.col-xs-6 {
+  padding-top: 15%;
+  margin-left: 5%;
+  width: 50%;
+  height: 300px;
+}
+
+.col-md-4 {
+  background-color: gray;
+}
+
+.container {
+  background-color: oldlace;
+  width: 800px;
+  margin: 20px auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  min-height: 500px;
+}
+
+.header {
+  /*text-align: center;*/
+}
+
+.center {
+  text-align: center;
+}
+
+
+/*.sidebar {
+  width: 25%;
+  float: right;
+  position: relative;
+  background-color: #6BB7B9;
+  clear: both;
+  height: 100%;
+}*/
+
+
+.sidebar {
+  width: 20%;
+  float: right;
+  /*position: relative;*/
+  background-color: lightgrey;
+  clear: both;
+  height: 110%;
+  font-size: 1.2em;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 8px 15px;
+  text-align: center;
+}
+
+
+
+.sidebar ul li a {
+  color: #8A0F3A;
+
+}
+
+.sidebar ul li:hover {
+  background-color: white;
+}
+
+#accounth2 {
+  font-size: 2.5em;
+}
+
+#account {
+  font-size: 1.3em;
+  color: white;
+}
+
+
+
+tr {
+  margin: 15px;
+  text-align: center;
+}
+
+tr:hover {
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+td a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.hiddendiv {
+  display: none;
+  float: left;
+}
+
+.hidden-title {
+  color: white;
+}
+
+.resources {
+  list-style-type: none;
+}
+
+
+.resources li a {
+  text-decoration: none;
+  color: black;
+}
+
+.resources li a:hover {
+  color: red;
+}
+
+#main {
+  text-decoration: none;\
+}
+
+#main a:hover {
+  color: red;
+}
+
+main {
+  padding: 10px;
+}
+
+#clear {
+  clear: both;
+}
+
+#feedback {
+  float: left;
+  width: 40%;
+}
+
+#list {
+  float: left;
+  width: 45%;
+  padding: 20px;
+}
+
+.form-fields {
+  padding-left: 20px;
+}
+
+#submit button:hover {
+  background-color: red;
+}
+
+#frontpage_links ul {
+  list-style-type: none;
+}
+
+#frontpage_links ul li {
+  padding: 5px;
+}
+
+#frontpage_links ul li a:hover {
+  color: white;
+  text-shadow: none;
+}
+
+.hiddeninput {
+  display: none;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: ##F5DA81;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: ##F5DA81}
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+.btn-img {
+  height: 200px;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+#community {
+  color: white;
+  font-size: 3em;
+  text-shadow: 2px 2px black;
+}
+
+#complaint {
+  color: #007D8C;
+  font-size: 2em;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  width: 25%;
+}
+
+#complaint:hover {
+  background-color: white;
+
+}
+
+#complaint:hover a {
+  color: white;
+}
+
+#what2know {
+  font-size: 2.5em;
+  color: lightgrey;
+}
+
+.frontlinks a {
+  font-size: 1.5em;
+  color: black;
+  text-shadow: 1px 1px 5px lightgrey;
+}
+
+#wheader {
+  font-size: 5em;
+  margin: 0px;
+  position: relative;
+  font-family: "Allerta Stencil", sans-serif;
+}
+
+#wheader a {
+  color: lightgrey;
+  text-shadow: 1px 1px 5px black;
+}
+
+#textarea {
+  font-family: times, sans-serif;
+}
+
+#sent {
+  color: black;
+  text-align: center;
+}
