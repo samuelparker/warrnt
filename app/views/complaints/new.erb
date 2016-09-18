@@ -1,6 +1,6 @@
 <main>
 
-<h1 id='pd' class='center'>Submit Feedback</h1>
+<h1 id='pd' class='center'>Submit Report</h1>
 
 <% if @sent %>
     <h2>Message Sent!</h2>
@@ -8,15 +8,15 @@
 
 <div id='list'>
 
-    <form>
+    <form action='/complaints' method='post'>
 
 <% Tag.all.sort_by(&:name).each do |tag| %>
 
-<input id='<%= tag.name.split(' ')[0] %>' type='checkbox'><%= tag.name %><br>
+<input id='<%= tag.name.split(' ')[0] %>' type='checkbox' name='checks[<%= tag.id %>]' value='<%= tag.id %>'><%= tag.name %><br>
 
 <% end %>
 
-</form>
+
 
 
 
@@ -28,7 +28,7 @@
   <ul class='resources'>
   <% tag.resources.each do |resource| %>
 
-  <li><a href='<%= resource.url %>'><%= resource.description %></a></li>
+  <li><a target="_blank" href='<%= resource.url %>'><%= resource.description %></a></li>
 
     <% end %>
   </ul>
@@ -37,14 +37,31 @@
 
 </div>
 <div id='feedback'>
-    <form action='/complaints' method='post'>
     <label for='subject'>Subject</label><br>
     <input type='text' name='subject' placeholder="subject" size='32'><br>
-    <label for='sendto'>Recipient</label><br>
-    <input type='text' name='to' placeholder="john@person.com" size='32'><br>
+
+
+
     <label for='youremail'>Your Email</label><br>
     <input type='text' name='from' placeholder="you@person.com" size='32'><br>
-    <label for='message'>Message</label><br>
+
+    <label for='sendto'>Recipient(s):</label><br>
+
+
+    <input id='email1' class='hiddeninput' type='text' name='to[:email1]' value='sfpdreport@sfgov.com' size='32'>
+    <input id='email2' class='hiddeninput' type='text' name='to[:email2]' value="contact@aclusf.com" size='32'>
+    <input id='email3' class='hiddeninput' type='text' name='to[:email3]' value="sfocc@sfgov.com" size='32'>
+    <input id='email4' class='hiddeninput' type='text' name='to[:email4]' value='citycouncil@sfgov.com' size='32'>
+    <input id='email5' class='hiddeninput' type='text' name='to[:email5]' value="contact@naacp.com" size='32'>
+    <input id='email6' class='hiddeninput' type='text' name='to[:email6]' value="crisishotline@sfwar.com" size='32'>
+    <input id='email7' class='hiddeninput' type='text' name='to[:email5]' value="neighborhoodcrimewatch@sf.org" size='32'>
+    <input id='email8' class='hiddeninput' type='text' name='to[:email6]' value="sf.ia@sfpd.org" size='32'>
+
+    <!-- <input type='text' name='to' placeholder="john@person.com" size='32'>
+ -->
+
+
+    <br><label for='message'>Message</label><br>
     <textarea name='message' cols='30', rows='10'></textarea><br>
     <input id='submit' type='submit' value="Send Email">
     </form>
