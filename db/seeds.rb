@@ -9,6 +9,10 @@ Tag.destroy_all
   Complaint.create(title: Faker::Name.title, body: Faker::StarWars.quote)
 end
 
+Complaint.all do |complaint|
+    complaint.tags << Tag.all.sample
+end
+
 10.times do
   Contact.create(name: Faker::Name.name, email: Faker::Internet.email)
 end
