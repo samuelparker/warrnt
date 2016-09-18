@@ -93,6 +93,7 @@ p{
   background-color: lightgrey;
   clear: both;
   height: 110%;
+  font-size: 1.2em;
 }
 
 .sidebar ul {
@@ -103,6 +104,13 @@ p{
 .sidebar ul li {
   padding: 8px 15px;
   text-align: center;
+}
+
+
+
+.sidebar ul li a {
+  color: #007D8C;
+
 }
 
 .sidebar ul li:hover {
@@ -222,13 +230,15 @@ main {
 }
 
 #complaint {
+  color: #007D8C;
+  font-size: 2em;
   border-radius: 15px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   width: 25%;
 }
 
 #complaint:hover {
-  background-color: darkblue;
+  background-color: white;
 
 }
 
@@ -255,4 +265,13 @@ main {
 
 #wheader a {
   color: black;
+}
+
+#textarea {
+  font-family: times, sans-serif;
+}
+
+#sent {
+  color: black;
+  text-align: center;
 }
