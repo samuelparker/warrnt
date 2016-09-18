@@ -10,7 +10,7 @@ body {
 
 img#logo-icon {
   content: url("../image_assets/landing-page-icons-04.png");
-  top: 10px;
+  /*top: 5px;*/
   left: 10px;
   position: absolute;
 }
@@ -109,7 +109,7 @@ p{
 
 
 .sidebar ul li a {
-  color: #007D8C;
+  color: #8A0F3A;
 
 }
 
@@ -223,6 +223,31 @@ main {
   display: none;
 }
 
+.dropdown:hover .dropbtn {
+    background-color: ##F5DA81;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: ##F5DA81}
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+.btn-img {
+  height: 200px;
+  padding-right: 100px;
+  padding-left: 100px;
+}
 #community {
   color: white;
   font-size: 3em;
@@ -261,10 +286,12 @@ main {
   font-size: 5em;
   margin: 0px;
   position: relative;
+  font-family: "Allerta Stencil", sans-serif;
 }
 
 #wheader a {
-  color: black;
+  color: lightgrey;
+  text-shadow: 1px 1px 5px black;
 }
 
 #textarea {
