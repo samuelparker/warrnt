@@ -1,33 +1,73 @@
+<div class='jumbotron' background-image = "image_assets/popo_pic.jpg">
+  <div class= "row">
+  <div class="col-xs-6 col-lg-4">
+              <h2 id='accounth2'>Warrnt Creates Accountability</h2>
+              <p id='account'>While authorities are essential, providing a system to prevent abuse of power is equally as vital. Warrnt bridges the gap between every day people and their local representatives, creating a safer, more accountable police force.</p>
+            </div>
+  </div>
+</div>
 <div class='sidebar'>
-<table>
-<tr><th>Category</th><th>Count</th></tr>
+
+
+<ul>
+<li>Category</li>
+
+<!-- <th>Count</th> -->
+
+
 <% @tags.each do |tag| %>
-<tr>
+
   <% if tag.name != "General" %>
-  <td><a href="/tags/<%="#{tag.id}"%>"><%= "#{tag.name}" %></a></td><td><%= "#{tag.complaints.count}" %></td>
+  <li><a href="/tags/<%="#{tag.id}"%>"><%= "#{tag.name}" %></a></li>
+
+  <!-- <td><%= "#{tag.complaints.count}" %></td> -->
+
   <% end %>
-</tr>
 <% end %>
-</table>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 <main>
 
-<p class='center'>Providing Community Access to Police Oversight</p>
-<div id ="frontpage_links"
-<h3>What to know before filing a complaint</h3>
-<a class="twitter-timeline"
+
+
+<p class='center' id='community'>Providing Community Access to Police Oversight</p>
+
+<div class='center'>
+
+<div id ="frontpage_links">
+<h3 id='what2know'>What to know before filing a complaint:</h3>
+<!-- <a class="twitter-timeline"
   href="https://twitter.com/fabric">
 Tweets by @fabric
 </a>
-  <ul>
+ -->  <ul>
     <% @resources.each do |resource| %>
-      <li><a href="<%= "#{resource.url}" %>"><%= "#{resource.description}" %></a></li>
+      <li class='frontlinks'><a href="<%= "#{resource.url}" %>"><%= "#{resource.description}" %></a></li>
     <% end %>
+
+    <a href='/complaints/new'><button id='complaint'>Submit a Report</button></a>
   </ul>
+
+
+
+
 </div>
 
-<a href='/complaints/new'>File a complaint</a>
+
+
+</div>
 
 
 

@@ -9,22 +9,26 @@ body {
 }
 
 img#logo-icon {
-  content: url("../image_assets/landing-page-icons-04.png")
+  content: url("../image_assets/landing-page-icons-04.png");
+  top: 10px;
+  left: 10px;
+  position: absolute;
 }
 
 #navbar-bg {
   background-color: #007D8C;
-  height: 50px;
+  /*height: 0px;*/
 }
 
 .jumbotron {
   height: 680px;
+  /*position: absolute;*/
   background: url('../image_assets/popo_cover.jpg') center center no-repeat;
   background-size: cover;
 }
 
 .row {
-  margin-top: 3.5%;
+  /*margin-top: 3.5%;*/
   height: 100%;
   opacity: .9;
 
@@ -44,7 +48,7 @@ p{
 }
 
 .col-xs-6 {
-  padding-top: 20%;
+  padding-top: 15%;
   margin-left: 5%;
   width: 50%;
   height: 300px;
@@ -72,16 +76,53 @@ p{
 }
 
 
-.sidebar {
+/*.sidebar {
   width: 25%;
   float: right;
+  position: relative;
   background-color: #6BB7B9;
   clear: both;
   height: 100%;
+}*/
+
+
+.sidebar {
+  width: 20%;
+  float: right;
+  /*position: relative;*/
+  background-color: lightgrey;
+  clear: both;
+  height: 110%;
 }
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 8px 15px;
+  text-align: center;
+}
+
+.sidebar ul li:hover {
+  background-color: white;
+}
+
+#accounth2 {
+  font-size: 2.5em;
+}
+
+#account {
+  font-size: 1.3em;
+  color: white;
+}
+
+
 
 tr {
   margin: 15px;
+  text-align: center;
 }
 
 tr:hover {
@@ -101,14 +142,21 @@ td a {
 
 .hiddendiv {
   display: none;
+  float: left;
+}
+
+.hidden-title {
+  color: white;
 }
 
 .resources {
   list-style-type: none;
 }
 
+
 .resources li a {
   text-decoration: none;
+  color: black;
 }
 
 .resources li a:hover {
@@ -138,7 +186,12 @@ main {
 
 #list {
   float: left;
-  width: 50%;
+  width: 45%;
+  padding: 20px;
+}
+
+.form-fields {
+  padding-left: 20px;
 }
 
 #submit button:hover {
@@ -154,9 +207,52 @@ main {
 }
 
 #frontpage_links ul li a:hover {
-  color: red;
+  color: white;
+  text-shadow: none;
 }
 
 .hiddeninput {
   display: none;
+}
+
+#community {
+  color: white;
+  font-size: 3em;
+  text-shadow: 2px 2px black;
+}
+
+#complaint {
+  border-radius: 15px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  width: 25%;
+}
+
+#complaint:hover {
+  background-color: darkblue;
+
+}
+
+#complaint:hover a {
+  color: white;
+}
+
+#what2know {
+  font-size: 2.5em;
+  color: lightgrey;
+}
+
+.frontlinks a {
+  font-size: 1.5em;
+  color: black;
+  text-shadow: 1px 1px 5px lightgrey;
+}
+
+#wheader {
+  font-size: 5em;
+  margin: 0px;
+  position: relative;
+}
+
+#wheader a {
+  color: black;
 }

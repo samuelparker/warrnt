@@ -8,11 +8,11 @@
 
 <div id='list'>
 
-    <form action='/complaints' method='post'>
+    <form class="form-fields" action='/complaints' method='post'>
 
 <% Tag.all.sort_by(&:name).each do |tag| %>
 
-<input id='<%= tag.name.split(' ')[0] %>' type='checkbox' name='checks[<%= tag.id %>]' value='<%= tag.id %>'><%= tag.name %><br>
+<input id='<%= tag.name.split(' ')[0] %>' type='checkbox' name='checks[<%= tag.id %>]' value='<%= tag.id %>'> <%= tag.name %><br>
 
 <% end %>
 
@@ -24,7 +24,7 @@
 
 <% Tag.all.sort_by(&:name).each do |tag| %>
 <div class='hiddendiv' id='<%= tag.name.split(' ')[0] %>div'>
-<p><%= tag.name %></p>
+<p class="hidden-title"><%= tag.name %></p>
   <ul class='resources'>
   <% tag.resources.each do |resource| %>
 
@@ -62,7 +62,7 @@
 
 
     <br><label for='message'>Message</label><br>
-    <textarea name='message' cols='30', rows='10'></textarea><br>
+    <textarea name='message' cols='100', rows='10'></textarea><br>
     <input id='submit' type='submit' value="Send Email">
     </form>
 
