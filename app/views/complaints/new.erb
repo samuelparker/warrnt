@@ -1,18 +1,20 @@
 <main>
 
-<h1 id='pd' class='center'>Submit Report</h1>
+
 
 <% if @sent %>
-    <h2>Message Sent!</h2>
+    <h2 id='sent'>Message Sent!</h2>
 <% else %>
+
+<h1 id='pd' class='center'>Submit Report</h1>
 
 <div id='list'>
 
-    <form action='/complaints' method='post'>
+    <form class="form-fields" action='/complaints' method='post'>
 
 <% Tag.all.sort_by(&:name).each do |tag| %>
 
-<input id='<%= tag.name.split(' ')[0] %>' type='checkbox' name='checks[<%= tag.id %>]' value='<%= tag.id %>'><%= tag.name %><br>
+<input id='<%= tag.name.split(' ')[0] %>' type='checkbox' name='checks[<%= tag.id %>]' value='<%= tag.id %>'> <%= tag.name %><br>
 
 <% end %>
 
@@ -24,7 +26,7 @@
 
 <% Tag.all.sort_by(&:name).each do |tag| %>
 <div class='hiddendiv' id='<%= tag.name.split(' ')[0] %>div'>
-<p><%= tag.name %></p>
+<p class="hidden-title"><%= tag.name %></p>
   <ul class='resources'>
   <% tag.resources.each do |resource| %>
 
@@ -62,7 +64,25 @@
 
 
     <br><label for='message'>Message</label><br>
-    <textarea name='message' cols='30', rows='10'></textarea><br>
+    <textarea id='textarea' name='message' cols='100', rows='20'><%=
+ <<-FORM
+#{Date.today.strftime('%d %b %Y')}
+
+To Whom it May Concern:
+
+I am writing to inform you about an interaction I had with {insert officer's name or badge #} of the San Francisco Police Department that occurred on {date of the interaction}.
+
+{Describe the interaction in detail, including the location, time, Only include facts that you're sure about. If you don't know the officer's badge # or name, include a physical description of him/her.}
+
+Sincerely,
+{Your Name}
+{Your Address}
+{Your Phone #}
+{Your Email}
+
+FORM
+
+    %></textarea><br>
     <input id='submit' type='submit' value="Send Email">
     </form>
 
