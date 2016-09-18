@@ -9,6 +9,9 @@ get '/complaints/new' do
 end
 
 post '/complaints' do
+  puts '*'*50
+  puts params
+
   Pony.mail(:to => params[:to], :from => params[:from], :subject => params[:subject], :body => params[:message])
   @sent = true
   erb :'/complaints/new'
