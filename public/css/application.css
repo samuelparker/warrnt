@@ -1,3 +1,7 @@
+a {
+  color: blue;
+}
+
 body {
   font-family: 'Baloo Bhaina', cursive;
   background-color: white;
@@ -64,7 +68,7 @@ h1 {
 .sidebar {
   width: 200px;
   float: right;
-  background-color: lightblue;
+  background-color: lightgreen;
   clear: both;
   height: 100%;
 }
@@ -132,4 +136,20 @@ main {
 
 #submit button:hover {
   background-color: red;
+}
+
+#frontpage_links ul {
+  list-style-type: none;
+}
+
+#frontpage_links ul li {
+  padding: 5px;
+}
+
+#frontpage_links ul li a:hover {
+  color: red;
+}
+
+.hiddeninput {
+  display: none;
 }
