@@ -18,6 +18,7 @@ gem 'dotenv'
 gem 'awesome_print'
 gem 'geocoder'
 
+
 gem 'shotgun', '~>0.9.1'
 
 group :test do
