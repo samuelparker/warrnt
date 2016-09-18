@@ -1,41 +1,12 @@
-<h1 id='pd'>test</h1>
+<main>
+
+<h1 id='pd' class='center'>Submit Feedback</h1>
 
 <% if @sent %>
     <h2>Message Sent!</h2>
 <% else %>
-  <!--   <form>
-      <input id='drinking' type='checkbox'>Drinking<br>
-      <input id='rudeness' type='checkbox'>Rudeness<br>
-      <input id='force' type='checkbox'>Excessive force<br>
-    </form>
 
-    <div class='hiddendiv' id='drinkingdiv'>
-    <h2>Drinking</h2>
-    <ul>
-    <li><a href='http://www.google.com'>Link1</a></li>
-    <li><a href='http://www.google.com'>Link2</a></li>
-    <li><a href='http://www.google.com'>Link2</a></li>
-    </ul>
-    </div>
-
-    <div class='hiddendiv' id='rudenessdiv'>
-    <h2>Rudeness</h2>
-    <ul>
-    <li><a href='http://www.google.com'>Link1</a></li>
-    <li><a href='http://www.google.com'>Link2</a></li>
-    <li><a href='http://www.google.com'>Link2</a></li>
-    </ul>
-    </div>
-
-    <div class='hiddendiv' id='forcediv'>
-    <h2>Force</h2>
-    <ul>
-    <li><a href='http://www.google.com'>Link1</a></li>
-    <li><a href='http://www.google.com'>Link2</a></li>
-    <li><a href='http://www.google.com'>Link2</a></li>
-    </ul>
-    </div>
-    <br><br><br> -->
+<div id='list'>
 
     <form>
 
@@ -46,6 +17,10 @@
 <% end %>
 
 </form>
+
+
+
+
 
 <% Tag.all.sort_by(&:name).each do |tag| %>
 <div class='hiddendiv' id='<%= tag.name.split(' ')[0] %>div'>
@@ -60,20 +35,25 @@
   </div>
 <% end %>
 
-<br>
+</div>
+<div id='feedback'>
     <form action='/complaints' method='post'>
-    <label for='subject'>Subject</label>
-    <input type='text' name='subject' placeholder="subject"><br>
-    <label for='sendto'>Send to</label>
-    <input type='text' name='to' placeholder="to"><br>
-    <label for='youremail'>Your Email</label>
-    <input type='text' name='from' placeholder="from"><br>
+    <label for='subject'>Subject</label><br>
+    <input type='text' name='subject' placeholder="subject" size='32'><br>
+    <label for='sendto'>Recipient</label><br>
+    <input type='text' name='to' placeholder="john@person.com" size='32'><br>
+    <label for='youremail'>Your Email</label><br>
+    <input type='text' name='from' placeholder="you@person.com" size='32'><br>
     <label for='message'>Message</label><br>
-    <textarea name='message' cols='50', rows='10'></textarea><br>
-    <input type='submit' value="Send">
+    <textarea name='message' cols='30', rows='10'></textarea><br>
+    <input id='submit' type='submit' value="Send Email">
     </form>
 
     </form>
+
+    </div>
 <% end %>
 
-<a href='/'>Home</a>
+<p id='clear'></p>
+
+</main>

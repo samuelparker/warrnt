@@ -1,8 +1,15 @@
-.container {
+body {
+  font-family: Helvetica;
   background-color: white;
+}
+
+.container {
+  background-color: oldlace;
   width: 800px;
-  margin: 5px auto;
+  margin: 20px auto;
   border: 1px solid black;
+  border-radius: 10px;
+  min-height: 500px;
 }
 
 .header {
@@ -19,13 +26,7 @@
   float: right;
   background-color: lightblue;
   clear: both;
-  min-height: 300px;
-}
-
-table {
-  margin: 15px;
-  border: 2px solid black;
-  border-collapse: collapse;
+  height: 100%;
 }
 
 tr {
@@ -36,8 +37,15 @@ tr:hover {
   background-color: white;
 }
 
-td {
-  padding: 3px;
+a {
+  text-decoration: none;
+}
+
+td a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
 }
 
 .hiddendiv {
@@ -54,4 +62,34 @@ td {
 
 .resources li a:hover {
   color: red;
+}
+
+#main {
+  text-decoration: none;\
+}
+
+#main a:hover {
+  color: red;
+}
+
+main {
+  padding: 10px;
+}
+
+#clear {
+  clear: both;
+}
+
+#feedback {
+  float: left;
+  width: 40%;
+}
+
+#list {
+  float: left;
+  width: 50%;
+}
+
+#submit button:hover {
+  background-color: red;
 }

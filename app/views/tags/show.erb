@@ -1,6 +1,6 @@
 <div class='sidebar'>
 <table>
-<tr><th>Tag</th><th>Count</th></tr>
+<tr><th>Category</th><th>Count</th></tr>
 <% @tags.each do |tag| %>
 <tr>
   <% if tag.name != "General" %>
@@ -10,6 +10,8 @@
 <% end %>
 </table>
 </div>
+
+<main>
 
 <h1 class='header center'>Warrnt</h1>
 <h2 class='center'><%= @tag.name %></h2>
@@ -21,3 +23,7 @@
   </ul>
 
 <a href='/complaints/new'>File a complaint</a>
+
+</main>
+
+<p id='clear'></p>

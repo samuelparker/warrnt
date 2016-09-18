@@ -9,10 +9,6 @@ Tag.destroy_all
   Complaint.create(title: Faker::Name.title, body: Faker::StarWars.quote)
 end
 
-Complaint.all do |complaint|
-    complaint.tags << Tag.all.sample
-end
-
 10.times do
   Contact.create(name: Faker::Name.name, email: Faker::Internet.email)
 end
@@ -158,3 +154,15 @@ Resource.create(description: "SFPD Operation Outreach",
 Resource.create(description: "Police Kitty Directs Traffic",
                         url: "https://ae01.alicdn.com/kf/HTB13KRNMFXXXXalXXXXq6xXFXXXc/New-Products-For-Pet-Police-Suit-Coat-And-Hat-Dog-font-b-Costume-b-font-Clothes.jpg"
                 ).tags << Tag.find_by(name: "Commendations")
+
+Complaint.all.each do |complaint|
+    complaint.tags << Tag.all.sample
+end
+
+Complaint.all.each do |complaint|
+    complaint.tags << Tag.all.sample
+end
+
+Complaint.all.each do |complaint|
+    complaint.tags << Tag.all.sample
+end
